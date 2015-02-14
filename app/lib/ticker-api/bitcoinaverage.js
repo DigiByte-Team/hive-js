@@ -7,7 +7,7 @@ var ltcToBtc = require('./sochain').ltcToBtc
 var ExchangeRateFunctions = {
   bitcoin: getExchangeRates,
   testnet: getExchangeRates,
-  litecoin: getLitecoinExchangeRates
+  litecoin: getLitecoinExchangeRates,
   digibyte: getDigibyteExchangeRates  
 }
 

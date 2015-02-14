@@ -9,7 +9,7 @@ module.exports = {
   testnet: bitcoin,
   litecoin: {
     default: 'LTC'
-  }
+  },
   digibyte: {
     default: 'DGB'
   }  
