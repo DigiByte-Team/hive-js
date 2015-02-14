@@ -1,9 +1,9 @@
 'use strict';
 
 var xhr = require('xhr')
-var apiRoot = "https://chain.so/api/v2/get_price/LTC/BTC"
+var apiRoot = "https://chain.so/api/v2/get_price/DGB/BTC"
 
-function ltcToBtc(callback){
+function dgbToBtc(callback){
   xhr({
     uri: apiRoot,
     timeout: 10000,
@@ -38,5 +38,5 @@ function toRate(res){
 }
 
 module.exports = {
-  ltcToBtc: ltcToBtc
+  dgbToBtc: dgbToBtc
 }

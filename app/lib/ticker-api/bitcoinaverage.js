@@ -8,6 +8,7 @@ var ExchangeRateFunctions = {
   bitcoin: getExchangeRates,
   testnet: getExchangeRates,
   litecoin: getLitecoinExchangeRates
+  digibyte: getDigibyteExchangeRates  
 }
 
 function BitcoinAverage(network){
@@ -27,6 +28,22 @@ function getLitecoinExchangeRates(callback){
 
       for(var currency in rates){
         rates[currency] = rates[currency] * ltcRate
+      }
+
+      callback(null, rates)
+    })
+  })
+}
+
+function getDigibyteExchangeRates(callback){
+  dgbToBtc(function(err, dgbRate){
+    if(err) return callback(err);
+
+    getExchangeRates(function(err, rates){
+      if(err) return callback(err);
+
+      for(var currency in rates){
+        rates[currency] = rates[currency] * dgbRate
       }
 
       callback(null, rates)

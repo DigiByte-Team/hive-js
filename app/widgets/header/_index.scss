@@ -24,6 +24,12 @@
   }
 }
 
+.digibyte {
+  .header {
+    background-color: darken($silver, 30%);
+  }
+}
+
 .header__balance {
   @include clickbtn;
   @extend .jigsaw-light;

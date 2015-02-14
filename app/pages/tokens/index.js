@@ -18,7 +18,11 @@ module.exports = function(el){
         {
           token: 'litecoin',
           litecoin: true
-        }
+        },
+        {
+          token: 'digibyte',
+          digibyte: true
+        }        
       ],
       capitalize: function(str){
         return str.replace(/^.|\s\S/g, function(a) {
